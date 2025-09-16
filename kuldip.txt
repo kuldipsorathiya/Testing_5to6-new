@@ -1,0 +1,49 @@
+Db - Tops
+Table - students
+Columns 
+
+id
+student_name - varchar
+student_std - int
+student_fees - int
+student_grade - varchar
+
+
+1)create db with the name of tops
+->CREATE DATABASE Tops
+
+2)create table with the name of students and predefined column is
+id and student_name
+->CREATE TABLE students(student_std int PRIMARY key AUTO_INCREMENT,student_name varchar(30))
+
+3)After creation of table add one more column student_fees
+->ALTER TABLE students add student_fees int
+
+4)After creation of table and student_fees add one more column student_grdae
+->ALTER TABLE students ADD student_grade varchar(30) AFTER student_fees
+
+5)change datatype of student grade
+->ALTER TABLE students MODIFY student_grade int
+
+6)remove column student_grade
+->ALTER TABLE students DROP student_grade
+
+7)Insert data in all columns
+->INSERT INTO  students(student_std,student_name,student_fees) VALUES(1,'kuldip',10000)	
+->INSERT INTO  students(student_std,student_name,student_fees) VALUES(2,'keval',20000)
+
+8)update data in any one column
+->UPDATE students SET student_fees=30000 WHERE student_std=1
+
+9)delete data from any column
+->ALTER TABLE students DROP student_fees
+
+10)select data according to grades
+->SELECT student_grade FROM students
+
+11)select data according to column wise
+->SELECT student_grade FROM students WHERE student_std=student_std	
+
+
+
+ 
